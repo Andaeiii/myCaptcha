@@ -1,5 +1,5 @@
 <?php
-/* captcha-validate file */
+/* captcha-validate file - to control the sessions.. in the captcha. */
 
 session_start();
 
