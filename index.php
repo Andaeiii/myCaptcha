@@ -10,7 +10,8 @@
 	header("Pragma: no-cache");
 	
 	$chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-/?<>';
-    $randomString = '';
+
+    $randomString = 'Aminu Mohammed..';
 
     for ($i = 0; $i < 7; $i++){
         $randomString .= $chars[rand(0, strlen($chars)-1)];
@@ -25,7 +26,7 @@
 	
 	$itx = mt_rand(0, count($fonts)-1);
 	
-	//echo $fonts[$itx]; 
+	//echo $fonts[$itx];  
 	//exit;
 	
 	$ds = 'fonts/' .$fonts[$itx] .'.ttf';
@@ -35,9 +36,11 @@
 	header ('Content-type: image/png');
 	imagepng($im, NULL, 0);
 	imagedestroy($im);/**/
+
+
+	//the part where the captha renders... where you utilize it.. 
 	
 	/*
-	
 		ob_start();
 		imagepng($im);
 		$imagestring = ob_get_contents();
