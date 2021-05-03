@@ -11,7 +11,7 @@
 	
 	$chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-/?<>';
 
-    $randomString = 'Aminu Mohammed..';
+    $randomString = ''; // 'Aminu Mohammed..';  //use any ext here... 
 
     for ($i = 0; $i < 7; $i++){
         $randomString .= $chars[rand(0, strlen($chars)-1)];
@@ -29,6 +29,7 @@
 	//echo $fonts[$itx];  
 	//exit;
 	
+	//loop through fonts in the fonts folder... 
 	$ds = 'fonts/' .$fonts[$itx] .'.ttf';
 	
 	imagettftext($im, 30, 0, 10, 38, imagecolorallocate ($im, 0, 0, 0), $ds , $randomString);
